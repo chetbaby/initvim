@@ -39,6 +39,9 @@ Plug 'heavenshell/vim-pydocstring'
 " Plug 'dkarter/bullets.vim'
  " Plug 'psliwka/vim-smoothie'
 Plug 'jparise/vim-graphql'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " We recommend updating the parsers on update
 call plug#end()
 
 "===================================================
