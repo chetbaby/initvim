@@ -5,12 +5,11 @@ call plug#begin()
 " Aesthetics - Main
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'luochen1990/rainbow'
 " Color Schemes
-Plug 'herrbischoff/cobalt2.vim'
 Plug 'morhetz/gruvbox'
 " Functionalities
 Plug 'vifm/vifm.vim'
@@ -165,7 +164,8 @@ command! -bar -bang Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options'
 function! FloatingFZF()
   let buf = nvim_create_buf(v:false, v:true)
   call setbufvar(buf, '&signcolumn', 'no')
-  let height = float2nr(35)
+  " reduced height for laptop to fit window
+  let height = float2nr(30)
   let width = float2nr(150)
   let horizontal = float2nr((&columns - width) / 2)
   let vertical = 1
@@ -260,22 +260,27 @@ nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 nmap <leader>t :call TrimWhitespace()<CR>
 nmap <leader>d <Plug>(pydocstring)
 nmap <leader>co :Colors<CR>
-nmap <leader>f :Files<CR>
-nmap <leader>L :Ag<CR>
+" nmap <leader>f :Files<CR>
+nmap <leader>fi :lua require('telescope.builtin').find_files({layout_strategy='horizontal',path_display={"tail"}, layout_config={width=130, preview_width=0.6}})<CR>
+" nmap <leader>L :Ag<CR>
+nmap <leader>L :lua require('telescope.builtin').live_grep({layout_strategy='horizontal',path_display={"tail"}, layout_config={width=130, preview_width=0.6}})<CR>
+nmap <leader>ma :lua require('telescope.builtin').marks({layout_strategy='horizontal',path_display={"tail"}, layout_config={width=130, preview_width=0.6}})<CR>
 nmap <leader>gb :Git blame<CR>
 nmap <leader><leader>g :Git<CR>
 map <leader>V "+y
 "xmap <leader>a gaip*
 "nmap <leader>a gaip*
 nmap <leader>li :Limelight!!<CR>
-nmap <leader><leader>b :Buffers<CR>
+" nmap <leader><leader>b :Buffers<CR>
+nmap <leader><leader>b :lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown({layout_config={width=130}}))<CR>
 nmap <leader><leader>a zz
 nmap <leader>cm :BCommits<CR>
 nmap <leader>dif :SignifyDiff<CR>
 nmap <leader>ud :UndotreeToggle<CR>
 nnoremap<leader>bd :%bd!<CR>
 nmap gs <Plug>(coc-git-chunkinfo)
-nmap \ :EditVifm<CR>
+" nmap \ :EditVifm<CR>
+nmap \ :lua require('telescope.builtin').file_browser({layout_strategy='horizontal', layout_config={width=130, preview_width=0.6}})<CR>
 nnoremap<Tab> :bnext<CR>
 nnoremap<S-Tab> :bprevious<CR>
 nnoremap n nzzzv
