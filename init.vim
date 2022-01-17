@@ -41,6 +41,8 @@ Plug 'jparise/vim-graphql'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " We recommend updating the parsers on update
+Plug 'tpope/vim-eunuch'
+Plug 'mhinz/vim-startify'
 call plug#end()
 
 "===================================================
@@ -95,6 +97,7 @@ set updatetime=100
 set shortmess+=c
 set signcolumn=yes
 set autoread
+set scrolloff=12
 let g:skipview_files = ['*\.vim']
 
 "===================================================
@@ -271,16 +274,16 @@ map <leader>V "+y
 "xmap <leader>a gaip*
 "nmap <leader>a gaip*
 nmap <leader>li :Limelight!!<CR>
-" nmap <leader><leader>b :Buffers<CR>
-nmap <leader><leader>b :lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown({layout_config={width=130}}))<CR>
+nmap <leader><leader>b :Buffers<CR>
+" nmap <leader><leader>b :lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown({layout_config={width=130}}))<CR>
 nmap <leader><leader>a zz
 nmap <leader>cm :BCommits<CR>
 nmap <leader>dif :SignifyDiff<CR>
 nmap <leader>ud :UndotreeToggle<CR>
 nnoremap<leader>bd :%bd!<CR>
 nmap gs <Plug>(coc-git-chunkinfo)
-" nmap \ :EditVifm<CR>
-nmap \ :lua require('telescope.builtin').file_browser({layout_strategy='horizontal', layout_config={width=130, preview_width=0.6}})<CR>
+nmap \ :EditVifm<CR>
+" nmap \ :lua require('telescope.builtin').file_browser({layout_strategy='horizontal', layout_config={width=130, preview_width=0.6}})<CR>
 nnoremap<Tab> :bnext<CR>
 nnoremap<S-Tab> :bprevious<CR>
 nnoremap n nzzzv
@@ -368,3 +371,4 @@ nmap <leader>fp :let @" = expand("%")<CR>
 nmap <leader>pt 1 <C-g>
 nmap <leader>ppt :let @" = expand("%")<CR>
 nmap <leader>dma :delmarks A-Z0-9<CR>
+nmap <leader>rn :Move %
