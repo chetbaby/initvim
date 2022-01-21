@@ -1,49 +1,4 @@
-"=========================================================
-"===================== PLUGINS ===========================
-"=========================================================
-call plug#begin()
-" Aesthetics - Main
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'ryanoasis/vim-devicons'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'luochen1990/rainbow'
-" Color Schemes
-Plug 'morhetz/gruvbox'
-" Functionalities
-Plug 'vifm/vifm.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tpope/vim-commentary'
-Plug 'vim-scripts/restore_view.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'tommcdo/vim-fugitive-blame-ext'
-Plug 'mhinz/vim-signify'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-surround'
-" Plug 'mbbill/undotree'
-Plug 'alvan/vim-closetag'
-Plug 'AndrewRadev/tagalong.vim'
-" Plug 'Valloric/MatchTagAlways'
-Plug 'qpkorr/vim-bufkill'
-" nw Plug 'metakirby5/codi.vim'
-Plug 'jiangmiao/auto-pairs'
-" Plug 'junegunn/vim-easy-align'
-Plug 'Yggdroot/indentLine'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'sheerun/vim-polyglot'
-" Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
-Plug 'heavenshell/vim-pydocstring'
-" Plug 'dkarter/bullets.vim'
- " Plug 'psliwka/vim-smoothie'
-Plug 'jparise/vim-graphql'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " We recommend updating the parsers on update
-Plug 'tpope/vim-eunuch'
-Plug 'mhinz/vim-startify'
-call plug#end()
+lua require 'init'
 
 "===================================================
 "==================   LANGUAGE SETUP ===============
@@ -282,7 +237,8 @@ nmap <leader>dif :SignifyDiff<CR>
 nmap <leader>ud :UndotreeToggle<CR>
 nnoremap<leader>bd :%bd!<CR>
 nmap gs <Plug>(coc-git-chunkinfo)
-nmap \ :EditVifm<CR>
+" nmap \ :EditVifm<CR>
+nmap \ :NvimTreeToggle<CR>
 " nmap \ :lua require('telescope.builtin').file_browser({layout_strategy='horizontal', layout_config={width=130, preview_width=0.6}})<CR>
 nnoremap<Tab> :bnext<CR>
 nnoremap<S-Tab> :bprevious<CR>
