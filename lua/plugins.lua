@@ -49,6 +49,7 @@ return require('packer').startup(
     -- use 'junegunn/fzf.vim'
     use 'sheerun/vim-polyglot'
     -- use 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
+    use 'norcalli/nvim-colorizer.lua'
     use 'heavenshell/vim-pydocstring'
     -- use 'dkarter/bullets.vim'
      -- use 'psliwka/vim-smoothie'

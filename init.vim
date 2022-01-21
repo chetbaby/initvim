@@ -253,8 +253,8 @@ nnoremap <leader>ga :G add .<CR>
 nnoremap <leader>gc :G commit<CR>
 nnoremap <leader>amen :G commit --amend --no-edit<CR>
 nnoremap <leader>pu :G push -u origin<CR>
-nnoremap <leader>chk :G checkout 
-nnoremap <leader>nb :G checkout -b 
+nnoremap <leader>chk :G checkout
+nnoremap <leader>nb :G checkout -b
 nnoremap <leader>br :G branch<CR>
 nnoremap <leader>res :G reset --hard
 nnoremap <leader>us :G status<CR>
@@ -303,7 +303,7 @@ nmap <F2> <Plug>(coc-rename)
 nmap <leader>ac  <Plug>(coc-codeaction)
 " nmap <leader><leader>act <Plug>(coc-codeaction)
 nmap <leader><leader>n <Plug>(coc-diagnostic-next)
-nmap <leader>bb <C-^> 
+nmap <leader>bb <C-^>
 nmap ma 'Azz
 nmap 'a mA
 nmap ms 'Szz
@@ -321,8 +321,8 @@ nmap 'r mR
 nmap mr 'Rzz
 nmap 't mT
 nmap <leader>op :!open %<CR>
-nmap <leader>md :!mkdir 
-nmap <leader>rm :!rm -rf 
+nmap <leader>md :!mkdir
+nmap <leader>rm :!rm -rf
 nmap <leader>fp :let @" = expand("%")<CR>
 nmap <leader>pt 1 <C-g>
 nmap <leader>ppt :let @" = expand("%")<CR>
