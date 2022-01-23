@@ -177,7 +177,7 @@ nnoremap <leader>log :G log<CR>
 nnoremap <leader>ga :G add .<CR>
 nnoremap <leader>gc :G commit<CR>
 nnoremap <leader>amen :G commit --amend --no-edit<CR>
-nnoremap <leader>pu :G push -u origin<CR>
+nnoremap <leader>up :G push -u origin<CR>
 nnoremap <leader>chk :G checkout
 nnoremap <leader>nb :G checkout -b
 nnoremap <leader>br :G branch<CR>
