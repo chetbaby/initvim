@@ -69,7 +69,6 @@ return packer.startup(
     use 'Yggdroot/indentLine'
     use 'sheerun/vim-polyglot'
     use 'norcalli/nvim-colorizer.lua'
-    use 'heavenshell/vim-pydocstring'
     -- use 'dkarter/bullets.vim'
      -- use 'psliwka/vim-smoothie'
     use 'jparise/vim-graphql'
