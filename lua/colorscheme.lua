@@ -13,5 +13,3 @@ vim.cmd([[
 ]])
 vim.opt.guicursor = vim.opt.guicursor + 'n-v-c:blinkon1'
 vim.opt.guicursor = vim.opt.guicursor + 'n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50'
-
-require'colorizer'.setup()

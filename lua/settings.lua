@@ -68,3 +68,4 @@ end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
+require'colorizer'.setup() -- here because it's after termguicolors
