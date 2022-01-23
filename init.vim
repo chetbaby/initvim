@@ -141,13 +141,13 @@ nmap <leader>w :noa w<CR>
 nmap <leader>W :w<CR>
 nmap <leader>pw :pwd<CR>
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
-nmap <leader>t :call TrimWhitespace()<CR>
+" nmap <leader>t :call TrimWhitespace()<CR>
 nmap <leader>d <Plug>(pydocstring)
 nmap <leader>co :Colors<CR>
 " nmap <leader>f :Files<CR>
-nmap <leader>fi :lua require('telescope.builtin').find_files({layout_strategy='horizontal',path_display={"tail"}, layout_config={width=130, preview_width=0.6}})<CR>
+nmap <leader>ff :lua require('telescope.builtin').find_files({layout_strategy='horizontal',path_display={"tail"}, layout_config={width=130, preview_width=0.6}})<CR>
 " nmap <leader>L :Ag<CR>
-nmap <leader>L :lua require('telescope.builtin').live_grep({layout_strategy='horizontal',path_display={"tail"}, layout_config={width=130, preview_width=0.6}})<CR>
+nmap <leader>fi :lua require('telescope.builtin').live_grep({layout_strategy='horizontal',path_display={"tail"}, layout_config={width=130, preview_width=0.6}})<CR>
 nmap <leader>ma :lua require('telescope.builtin').marks({layout_strategy='horizontal',path_display={"tail"}, layout_config={width=130, preview_width=0.6}})<CR>
 nmap <leader>gb :Git blame<CR>
 nmap <leader><leader>g :Git<CR>
