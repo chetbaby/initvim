@@ -104,11 +104,6 @@ _G.packer_plugins = {
     path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/indentLine",
     url = "https://github.com/Yggdroot/indentLine"
   },
-  ["limelight.vim"] = {
-    loaded = true,
-    path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/limelight.vim",
-    url = "https://github.com/junegunn/limelight.vim"
-  },
   ["nest.nvim"] = {
     loaded = true,
     path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/nest.nvim",
@@ -180,11 +175,6 @@ _G.packer_plugins = {
     path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/ultisnips",
     url = "https://github.com/SirVer/ultisnips"
   },
-  ["vifm.vim"] = {
-    loaded = true,
-    path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/vifm.vim",
-    url = "https://github.com/vifm/vifm.vim"
-  },
   ["vim-airline"] = {
     loaded = true,
     path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/vim-airline",
@@ -225,6 +215,11 @@ _G.packer_plugins = {
     path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/vim-eunuch",
     url = "https://github.com/tpope/vim-eunuch"
   },
+  ["vim-floaterm"] = {
+    loaded = true,
+    path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/vim-floaterm",
+    url = "https://github.com/voldikss/vim-floaterm"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -254,11 +249,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/vim-polyglot",
     url = "https://github.com/sheerun/vim-polyglot"
-  },
-  ["vim-pydocstring"] = {
-    loaded = true,
-    path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/vim-pydocstring",
-    url = "https://github.com/heavenshell/vim-pydocstring"
   },
   ["vim-sensible"] = {
     loaded = true,

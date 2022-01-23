@@ -45,7 +45,6 @@ return packer.startup(
     use 'vim-airline/vim-airline-themes'
     use 'ryanoasis/vim-devicons'
     use 'junegunn/goyo.vim' -- zen mode
-    -- use 'junegunn/limelight.vim'
     use 'luochen1990/rainbow'
     -- Color Schemes
     use 'morhetz/gruvbox'
@@ -65,11 +64,9 @@ return packer.startup(
     use 'qpkorr/vim-bufkill'
     -- nw Plug 'metakirby5/codi.vim'
     use 'jiangmiao/auto-pairs'
-    -- use 'junegunn/vim-easy-align'
     use 'Yggdroot/indentLine'
     use 'sheerun/vim-polyglot'
     use 'norcalli/nvim-colorizer.lua'
-    -- use 'dkarter/bullets.vim'
      -- use 'psliwka/vim-smoothie'
     use 'jparise/vim-graphql'
     use 'nvim-lua/plenary.nvim'
@@ -84,5 +81,6 @@ return packer.startup(
     config = function() require'nvim-tree'.setup {} end
     }
     use 'LionC/nest.nvim'
+    use 'voldikss/vim-floaterm'
   end
 )
