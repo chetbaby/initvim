@@ -1,2 +1,3 @@
+require('colorscheme')
 require('plugins')
-require'colorizer'.setup()
+require('settings')

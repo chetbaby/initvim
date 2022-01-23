@@ -1,59 +1,45 @@
 lua require 'init'
 
-"===================================================
-"==================   LANGUAGE SETUP ===============
-"===================================================
-" let g:python3_host_prog = '/usr/local/bin/python3'
-let g:python_host_prog = '/usr/bin/python2.7'
-let g:node_host_prog = '/usr/local/lib/node_modules/neovim/bin/cli.js'
-let g:loaded_ruby_provider = 0 "off
-let g:node = 0 "off
-let g:loaded_python_provider = 0 "off
-let g:loaded_perl_provider = 0 "off
-
 " HTML, XML, Jinja, etc.
-autocmd FileType python nmap <leader>x :0,$!~/.config/nvim/env/bin/python -m yapf<CR>
-autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType htmldjango inoremap {{ {{  }}<left><left><left>
-autocmd FileType htmldjango inoremap {% {%  %}<left><left><left>
-autocmd FileType htmldjango inoremap {# {#  #}<left><left><left>
-autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
+" autocmd FileType python nmap <leader>x :0,$!~/.config/nvim/env/bin/python -m yapf<CR>
+" autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+" autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
+" autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
+" autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
+" autocmd FileType htmldjango inoremap {{ {{  }}<left><left><left>
+" autocmd FileType htmldjango inoremap {% {%  %}<left><left><left>
+" autocmd FileType htmldjango inoremap {# {#  #}<left><left><left>
+" autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 "=======================================
 "============   BASE/SANITY ============
 "=======================================
-syntax on
-filetype plugin indent on
-set modifiable
-set noerrorbells
-set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent smartindent
-set number relativenumber
-set noswapfile nobackup
-set incsearch ignorecase smartcase hlsearch
-set ruler laststatus=2 showcmd showmode
-set list listchars=trail:»,tab:»-
-set fillchars+=vert:\
-set wrap breakindent
-set encoding=utf-8
-set background=dark
-set title
-set foldmethod=indent
-set foldnestmax=30
-set nofoldenable
-set foldlevel=1
-set splitbelow splitright
-set viewoptions=cursor,folds,slash,unix
-set hidden
-set cmdheight=2
-set updatetime=100
-set shortmess+=c
-set signcolumn=yes
-set autoread
-set scrolloff=12
-let g:skipview_files = ['*\.vim']
+" set modifiable
+" set noerrorbells
+" set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent smartindent
+" set number relativenumber
+" set noswapfile nobackup
+" set incsearch ignorecase smartcase hlsearch
+" set ruler laststatus=2 showcmd showmode
+" set list listchars=trail:»,tab:»-
+" set fillchars+=vert:\
+" set wrap breakindent
+" set encoding=utf-8
+" set background=dark
+" set title
+" set foldmethod=indent
+" set foldnestmax=30
+" set nofoldenable
+" set foldlevel=1
+" set splitbelow splitright
+" set viewoptions=cursor,folds,slash,unix
+" set hidden
+" set cmdheight=2
+" set updatetime=100
+" set shortmess+=c
+" set signcolumn=yes
+" set autoread
+" set scrolloff=12
 
 "===================================================
 "================== AUTO-STUFF =====================
@@ -83,21 +69,21 @@ autocmd BufWinEnter * setlocal modifiable
 "=============================================
 "============ DISPLAY PREFERENCES ============
 "=============================================
-highlight Pmenu guibg=white guifg=black gui=bold
-highlight Pmenu guifg=black gui=bold
-highlight Comment gui=bold
-highlight NonText guibg=none
-highlight Normal guibg=NONE ctermbg=NONE
-highlight LineNr guibg=NONE ctermbg=NONE
-highlight MatchParen guibg=lightyellow
-highlight default link CocErrorHighlight   CocUnderline
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-let g:gruvbox_italic=1
-colorscheme gruvbox
+" highlight Pmenu guibg=white guifg=black gui=bold
+" highlight Pmenu guifg=black gui=bold
+" highlight Comment gui=bold
+" highlight NonText guibg=none
+" highlight Normal guibg=NONE ctermbg=NONE
+" highlight LineNr guibg=NONE ctermbg=NONE
+" highlight MatchParen guibg=lightyellow
+" highlight default link CocErrorHighlight   CocUnderline
+" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" let g:gruvbox_italic=1
+" colorscheme gruvbox
 
-set termguicolors
-set guicursor+=n-v-c:blinkon1
-set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
+" set termguicolors
+" set guicursor+=n-v-c:blinkon1
+" set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
 
 "=============================================
 "============  CUSTOM FUNCTIONS   ============
