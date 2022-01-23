@@ -128,18 +128,6 @@ let g:fzf_layout = { 'window': 'call FloatingFZF()' }
 "************************************************************
 "************************************************************
 
-let mapleader=" "
-map <esc> :noh<cr>
-nmap <leader>Q :qa!<CR>
-nnoremap ; :
-nmap <leader>q :BD<CR>
-nmap <leader>w :noa w<CR>
-nmap <leader>W :w<CR>
-nmap <leader>pw :pwd<CR>
-nmap <leader>r :so ~/.config/nvim/init.vim<CR>
-" nmap <leader>t :call TrimWhitespace()<CR>
-nmap <leader>t :FloatermToggle<CR>
-nmap <leader>co :Colors<CR>
 " TELESCOPE
 nmap <leader>fi :lua require('telescope.builtin').find_files({layout_strategy='horizontal',path_display={"tail"}, layout_config={width=130, preview_width=0.6}})<CR>
 nmap <leader>L :Ag<CR>
@@ -163,39 +151,8 @@ nnoremap <leader>sp :split<CR>
 nnoremap <leader>vs :vs<CR>
 nnoremap <leader>sw <C-w>r
 nnoremap <leader>ee <C-w>=
-" Git shit
-nmap <leader><leader>g :Git<CR>
-nmap <leader>gb :Git blame<CR>
-nnoremap <leader>log :G log<CR>
-nnoremap <leader>ga :G add .<CR>
-nnoremap <leader>gc :G commit<CR>
-nnoremap <leader>amen :G commit --amend --no-edit<CR>
-nnoremap <leader>up :G push -u origin<CR>
-nnoremap <leader>chk :G checkout
-nnoremap <leader>nb :G checkout -b
-nnoremap <leader>br :G branch<CR>
-nnoremap <leader>res :G reset --hard
-nnoremap <leader>us :G status<CR>
-nnoremap <leader>undo :G checkout -- .<CR>
-nnoremap <leader>sta :G stash --index<CR>
-map <leader>mf :diffget //2<CR>
-map <leader>mj :diffget //3<CR>
-nnoremap <leader>G :15split \| Gedit :<CR>
-" MOVEMENT
-nnoremap <leader>j <C-w><C-w>
-nnoremap <leader><leader> <C-w>
-nnoremap Y y$
-nnoremap L 15j
-nnoremap H 15k
-nnoremap U <C-r>
-nnoremap E $
-nnoremap B ^
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
 " FOLDING
 nnoremap <expr> <f9> &foldlevel ? 'zM' :'zR'
-nnoremap <f8> zA
-nnoremap ff za
 " terminal
 tmap <Esc> <C-\><C-n>
 tmap <C-w> <Esc><C-w>
@@ -228,30 +185,4 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 " nmap <leader><leader>act <Plug>(coc-codeaction)
 nmap <leader><leader>n <Plug>(coc-diagnostic-next)
 " ???
-nmap <leader>bb <C-^> " 
-" MARKS
-nmap ma 'Azz
-nmap 'a mA
-nmap ms 'Szz
-nmap 's mS
-nmap md 'Dzz
-nmap 'd mD
-nmap mf 'Fzz
-nmap 'f mF
-nmap ma 'Azz
-nmap 'g mG
-nmap mg 'Gzz
-nmap 'v mV
-nmap mb 'Bzz
-nmap 'r mR
-nmap mr 'Rzz
-nmap 't mT
-nmap <leader>dma :delmarks A-Z0-9<CR>
-"file stufff
-nmap <leader>op :!open %<CR>
-nmap <leader>md :!mkdir
-nmap <leader>rm :!rm -rf
-nmap <leader>fp :let @" = expand("%")<CR>
-nmap <leader>pt 1 <C-g>
-nmap <leader>dma :delmarks A-Z0-9<CR>
-nmap <leader>rn :Move %
+nmap <leader>bb <C-^> "

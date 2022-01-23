@@ -80,7 +80,7 @@ return packer.startup(
     },
     config = function() require'nvim-tree'.setup {} end
     }
-    use 'LionC/nest.nvim'
+    -- use 'LionC/nest.nvim'
     use 'voldikss/vim-floaterm'
   end
 )

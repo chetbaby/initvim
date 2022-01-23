@@ -104,11 +104,6 @@ _G.packer_plugins = {
     path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/indentLine",
     url = "https://github.com/Yggdroot/indentLine"
   },
-  ["nest.nvim"] = {
-    loaded = true,
-    path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/nest.nvim",
-    url = "https://github.com/LionC/nest.nvim"
-  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
