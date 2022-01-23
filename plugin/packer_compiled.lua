@@ -109,11 +109,26 @@ _G.packer_plugins = {
     path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/limelight.vim",
     url = "https://github.com/junegunn/limelight.vim"
   },
+  ["nest.nvim"] = {
+    loaded = true,
+    path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/nest.nvim",
+    url = "https://github.com/LionC/nest.nvim"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
   ["nvim-tree.lua"] = {
     config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0" },
     loaded = true,
     path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -185,11 +200,6 @@ _G.packer_plugins = {
     path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/vim-bufkill",
     url = "https://github.com/qpkorr/vim-bufkill"
   },
-  ["vim-closer"] = {
-    loaded = true,
-    path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/vim-closer",
-    url = "https://github.com/9mm/vim-closer"
-  },
   ["vim-closetag"] = {
     loaded = true,
     path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/vim-closetag",
@@ -249,11 +259,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/vim-pydocstring",
     url = "https://github.com/heavenshell/vim-pydocstring"
-  },
-  ["vim-sandwich"] = {
-    loaded = true,
-    path = "/Users/chetbaby/.local/share/nvim/site/pack/packer/start/vim-sandwich",
-    url = "https://github.com/machakann/vim-sandwich"
   },
   ["vim-sensible"] = {
     loaded = true,

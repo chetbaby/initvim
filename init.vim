@@ -1,46 +1,5 @@
 lua require 'init'
 
-" HTML, XML, Jinja, etc.
-" autocmd FileType python nmap <leader>x :0,$!~/.config/nvim/env/bin/python -m yapf<CR>
-" autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
-" autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
-" autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
-" autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
-" autocmd FileType htmldjango inoremap {{ {{  }}<left><left><left>
-" autocmd FileType htmldjango inoremap {% {%  %}<left><left><left>
-" autocmd FileType htmldjango inoremap {# {#  #}<left><left><left>
-" autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
-
-"=======================================
-"============   BASE/SANITY ============
-"=======================================
-" set modifiable
-" set noerrorbells
-" set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent smartindent
-" set number relativenumber
-" set noswapfile nobackup
-" set incsearch ignorecase smartcase hlsearch
-" set ruler laststatus=2 showcmd showmode
-" set list listchars=trail:»,tab:»-
-" set fillchars+=vert:\
-" set wrap breakindent
-" set encoding=utf-8
-" set background=dark
-" set title
-" set foldmethod=indent
-" set foldnestmax=30
-" set nofoldenable
-" set foldlevel=1
-" set splitbelow splitright
-" set viewoptions=cursor,folds,slash,unix
-" set hidden
-" set cmdheight=2
-" set updatetime=100
-" set shortmess+=c
-" set signcolumn=yes
-" set autoread
-" set scrolloff=12
-
 "===================================================
 "================== AUTO-STUFF =====================
 "===================================================
@@ -67,25 +26,6 @@ augroup END
 autocmd BufWinEnter * setlocal modifiable
 
 "=============================================
-"============ DISPLAY PREFERENCES ============
-"=============================================
-" highlight Pmenu guibg=white guifg=black gui=bold
-" highlight Pmenu guifg=black gui=bold
-" highlight Comment gui=bold
-" highlight NonText guibg=none
-" highlight Normal guibg=NONE ctermbg=NONE
-" highlight LineNr guibg=NONE ctermbg=NONE
-" highlight MatchParen guibg=lightyellow
-" highlight default link CocErrorHighlight   CocUnderline
-" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-" let g:gruvbox_italic=1
-" colorscheme gruvbox
-
-" set termguicolors
-" set guicursor+=n-v-c:blinkon1
-" set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
-
-"=============================================
 "============  CUSTOM FUNCTIONS   ============
 "=============================================
 " Trim Whitespaces
@@ -104,7 +44,7 @@ command! -bar -bang Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options'
 " command! -bang -nargs=? -complete=dir Files
 "     \ call fzf#vim#files(<q-args>, {'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']}, <bang>0)
 
-" Floating window
+" FZF Floating window
 function! FloatingFZF()
   let buf = nvim_create_buf(v:false, v:true)
   call setbufvar(buf, '&signcolumn', 'no')
