@@ -22,6 +22,16 @@ vim.api.nvim_set_keymap('n', '<Leader>x', ':helloooo dere', show) --stupid examp
 --   term_mode = "t",
 --   command_mode = "c",
 
+-- MISC (dump)
+keymap('', '<leader>V', '+y', noshow)
+keymap('', '\\', ':NvimTreeToggle<CR>', noshow)
+
+-- BUFFER
+keymap('', '<leader><leader>b', ':Buffers<CR>', noshow) -- telescope
+keymap('', '<leader>bd', ':%bd!<CR>', noshow)
+keymap('', '<Tab>', ':bnext<CR>', noshow)
+keymap('', '<S-Tab>', ':bprevious<CR>', noshow)
+
 -- BASE
 keymap('', '<esc>', ':noh<CR>', noshow)
 keymap('', '<leader>Q', ':qa!<CR>', noshow)
@@ -35,6 +45,12 @@ keymap('', '<leader>r', ':so ~/.config/nvim/init.vim<CR>', show)
 keymap('', '<leader>t', ':FloatermToggle<CR>', noshow)
 keymap('', '<leader>co', ':Colors<CR>', noshow) -- telescope?
 
+-- SPLIT CONTROL
+keymap('', '<leader>sp', ':split<CR>', noshow)
+keymap('', '<leader>vs', ':vs<CR>', noshow)
+keymap('', '<leader>sw', '<C-w>r', noshow)
+keymap('', '<leader>ee', '<C-w>=', noshow)
+
 -- MOVEMENT
 keymap('', '<leader>j','<C-w><C-w>', noshow) -- next split
 keymap('', 'Y','y$', noshow) -- select to end of line
@@ -45,6 +61,12 @@ keymap('', 'E','$', noshow) -- end of line
 keymap('', 'B','^', noshow) -- beginnning of line
 keymap('v', 'J', ":m '>+1<CR>gv=gv", noshow) -- move selected line up
 keymap('v', 'K', ":m '<-2<CR>gv=gv", noshow) -- move selected line down
+keymap('', 'n', 'nzzzv', noshow)
+keymap('', 'N', 'Nzzzv', noshow)
+
+-- STAY IN INDENT MODE
+keymap("v", "<", "<gv", noshow)
+keymap("v", ">", ">gv", noshow)
 
 -- FOLDING
 keymap('', '<F8>','zA', noshow)
@@ -70,6 +92,7 @@ keymap('n', "'t", 'mT', noshow)
 keymap('n', '<leader>dma', ':delmarks A-Z0-9<CR>', noshow)
 
 -- GIT SHIT
+keymap('', '<leader>cm', ':BCommits<CR>', noshow) -- telescope
 keymap('', '<leader><leader>g',':Git<CR>', show)
 keymap('', '<leader>gb',':G blame<CR>', show)
 keymap('', '<leader>log',':G log<CR>', show)
@@ -83,6 +106,7 @@ keymap('', '<leader>br',':G branch<CR>', show) -- telescope?
 keymap('', '<leader>res',':G reset --hard', show)
 keymap('', '<leader>resf',':G checkout --<CR>', show)
 keymap('', '<leader>sta',':G stash --index<CR>', show)
+keymap('', '<leader>dif', ':SignifyDiff<CR>', noshow) -- another lua dif plugin?
 keymap('', '<leader>mf',':diffget //2<CR>', show) -- diff stuff i don't use
 keymap('', '<leader>mj',':diffget //3<CR>', show) -- diff stuff i don't use
 keymap('', '<leader>G',':15split | Gedit :<CR>', show)
@@ -93,9 +117,6 @@ keymap("n", "<M-Down>", ":resize +2<CR>", noshow)
 keymap("n", "<M-Left>", ":vertical resize -2<CR>", noshow)
 keymap("n", "<M-Right>", ":vertical resize +2<CR>", noshow)
 
--- STAY IN INDENT MODE
-keymap("v", "<", "<gv", noshow)
-keymap("v", ">", ">gv", noshow)
 
 -- Custom
 -- keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", noshow)
