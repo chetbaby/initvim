@@ -104,9 +104,9 @@ command -nargs=1 E execute('silent! !mkdir -p "$(dirname "<args>")"') <Bar> e <a
 
 " let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:vifm_replace_netrw = 1
-let g:vifm_replace_netrw_cmd = "Vifm"
-let g:vifm_embed_split = 1
+" let g:vifm_replace_netrw = 1
+" let g:vifm_replace_netrw_cmd = "Vifm"
+" let g:vifm_embed_split = 1
 let g:rainbow_active = 1
 let g:closetag_filenames = '*.html,*.xhtml,*.js,*.jsx,*.phtml'
 let g:tagalong_filetypes = ['html', 'xml', 'jsx', 'eruby', 'ejs', 'eco', 'php', 'htmldjango', 'javascriptreact', 'typescriptreact']
@@ -154,7 +154,6 @@ nmap <leader><leader>g :Git<CR>
 map <leader>V "+y
 "xmap <leader>a gaip*
 "nmap <leader>a gaip*
-nmap <leader>li :Limelight!!<CR>
 nmap <leader><leader>b :Buffers<CR>
 " nmap <leader><leader>b :lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown({layout_config={width=130}}))<CR>
 nmap <leader><leader>a zz

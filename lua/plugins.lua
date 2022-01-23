@@ -44,13 +44,13 @@ return packer.startup(
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
     use 'ryanoasis/vim-devicons'
-    use 'junegunn/goyo.vim'
-    use 'junegunn/limelight.vim'
+    use 'junegunn/goyo.vim' -- zen mode
+    -- use 'junegunn/limelight.vim'
     use 'luochen1990/rainbow'
     -- Color Schemes
     use 'morhetz/gruvbox'
     -- Functionalities
-    use 'vifm/vifm.vim'
+    -- use 'vifm/vifm.vim'
     use {'neoclide/coc.nvim', branch = 'release'}
     use 'vim-scripts/restore_view.vim'
     use 'tpope/vim-fugitive'
