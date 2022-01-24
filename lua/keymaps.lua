@@ -22,9 +22,13 @@ vim.api.nvim_set_keymap('n', '<Leader>x', ':helloooo dere', show) --stupid examp
 --   term_mode = "t",
 --   command_mode = "c",
 
--- MISC (dump)
+-- MISC (dump, org later)
 keymap('', '<leader>V', '+y', noshow)
 keymap('', '\\', ':NvimTreeToggle<CR>', noshow)
+
+-- TERMINAL
+keymap('t', '<Esc>', '<C-\\><C-n>', noshow)
+keymap('t', '<C-w>', '<Esc><C-w>', noshow)
 
 -- BUFFER
 keymap('', '<leader><leader>b', ':Buffers<CR>', noshow) -- telescope
