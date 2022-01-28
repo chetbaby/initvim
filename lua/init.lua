@@ -1,8 +1,7 @@
-vim.opt.termguicolors = true
 require('colorscheme')
 require('pre-plugin')
-require('plugins')
 require('settings')
+require('plugins')
 require('keymaps')
 
 require'colorizer'.setup()

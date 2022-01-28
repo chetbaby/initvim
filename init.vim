@@ -67,23 +67,23 @@ endfunction
 "=============================================
 "==================   Coc   ==================
 "=============================================
-function! s:check_back_space() abort
-let col = col('.') - 1
-return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+" function! s:check_back_space() abort
+" let col = col('.') - 1
+" return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
 
-if exists('*complete_info')
-inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-else
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
-let g:netrw_altv=1
+" if exists('*complete_info')
+" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+" else
+" inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" endif
+" let g:netrw_altv=1
 " for when coc hangs
-autocmd VimLeavePre * :call coc#rpc#kill()
-  autocmd VimLeave * if get(g:, 'coc_process_pid', 0) | call system('kill -9 -'.g:coc_process_pid) | endif
+" autocmd VimLeavePre * :call coc#rpc#kill()
+"   autocmd VimLeave * if get(g:, 'coc_process_pid', 0) | call system('kill -9 -'.g:coc_process_pid) | endif
 
 " Create new folder/file...use `:E folder/file`
-command -nargs=1 E execute('silent! !mkdir -p "$(dirname "<args>")"') <Bar> e <args>
+" command -nargs=1 E execute('silent! !mkdir -p "$(dirname "<args>")"') <Bar> e <args>
 
 " hover fn
 " function! ShowDocIfNoDiagnostic(timer_id)
