@@ -47,10 +47,10 @@ return packer.startup(
     -- NVIM-TREE
     use {
       'kyazdani42/nvim-tree.lua',
+      config = function() require'nvim-tree'.setup {} end,
       requires = {
         'kyazdani42/nvim-web-devicons', -- optional, for file icon
       },
-      config = function() require'nvim-tree'.setup {} end
     }
 
     -- FUNCTIONALITIES

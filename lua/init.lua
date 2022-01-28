@@ -125,4 +125,4 @@ end,
 vim.g.UltiSnipsExpandTrigger="<tab>"
 vim.g.UltiSnipsJumpForwardTrigger="<c-b>"
 vim.g.UltiSnipsJumpBackwardTrigger="<c-z>"
-require('colorizer').setup() -- because it's after termguicolors
+

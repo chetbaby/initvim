@@ -1,7 +1,7 @@
 local noshow = { noremap = true, silent = true }
 local show = { noremap = true, silent = false }
 
-local term_opts = { silent = true }
+-- local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -121,6 +121,18 @@ keymap("n", "<M-Down>", ":resize +2<CR>", noshow)
 keymap("n", "<M-Left>", ":vertical resize -2<CR>", noshow)
 keymap("n", "<M-Right>", ":vertical resize +2<CR>", noshow)
 
+-- LSP
+keymap('n', 'gd', ':lua vim.lsp.buf.definition()<cr>', noshow)
+keymap('n', 'gD', ':lua vim.lsp.buf.declaration()<cr>', noshow)
+keymap('n', 'gi', ':lua vim.lsp.buf.implementation()<cr>', noshow)
+keymap('n', 'gw', ':lua vim.lsp.buf.document_symbol()<cr>', noshow)
+keymap('n', 'gw', ':lua vim.lsp.buf.workspace_symbol()<cr>', noshow)
+keymap('n', 'gr', ':lua vim.lsp.buf.references()<cr>', noshow)
+keymap('n', 'gt', ':lua vim.lsp.buf.type_definition()<cr>', noshow)
+keymap('n', 'K', ':lua vim.lsp.buf.hover()<cr>', noshow)
+keymap('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<cr>', noshow)
+keymap('n', '<leader>af', ':lua vim.lsp.buf.code_action()<cr>', noshow)
+keymap('n', '<leader>rn', ':lua vim.lsp.buf.rename()<cr>', noshow)
 
 -- Custom
 -- keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", noshow)
