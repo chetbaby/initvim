@@ -120,6 +120,7 @@ let g:mta_filetypes = {
   \}
 let g:fzf_layout = { 'window': 'call FloatingFZF()' }
 
+let g:coc_start_at_startup = v:false
 "************************************************************
 "************************************************************
 "============================================================
@@ -139,31 +140,31 @@ nmap <leader>ma :lua require('telescope.builtin').marks({layout_strategy='horizo
 nnoremap <expr> <f9> &foldlevel ? 'zM' :'zR'
 
 " COC stuff
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-nnoremap <leader>pre :Prettier<CR>
+" command! -nargs=0 Prettier :CocCommand prettier.formatFile
+" nnoremap <leader>pre :Prettier<CR>
 " on a chunk line
-nmap gs <Plug>(coc-git-chunkinfo)
-nnoremap <f7> :CocRestart<CR>
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
+" nmap gs <Plug>(coc-git-chunkinfo)
+" nnoremap <f7> :CocRestart<CR>
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gr <Plug>(coc-references)
+" nmap <silent> gy <Plug>(coc-type-definition)
+" nmap <silent> gi <Plug>(coc-implementation)
 "time before popup shows
 " set updatetime=300
-vmap <leader>for <Plug>(coc-format-selected)
-nmap <silent> oo :call CocActionAsync('doHover')<CR>
+" vmap <leader>for <Plug>(coc-format-selected)
+" nmap <silent> oo :call CocActionAsync('doHover')<CR>
 " autocmd CursorHold * silent call CocActionAsync('doHover')
-nmap <leader>die :CocDiagnostics<CR>
-nmap <leader>ccon :CocConfig<CR>
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-nmap <F2> <Plug>(coc-rename)
+" nmap <leader>die :CocDiagnostics<CR>
+" nmap <leader>ccon :CocConfig<CR>
+" inoremap <silent><expr> <TAB>
+      " \ pumvisible() ? "\<C-n>" :
+      " \ <SID>check_back_space() ? "\<TAB>" :
+      " \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" nmap <F2> <Plug>(coc-rename)
 " nmap <leader><leader>f <Plug>(coc-fix-current)
-nmap <leader>ac  <Plug>(coc-codeaction)
+" nmap <leader>ac  <Plug>(coc-codeaction)
 " nmap <leader><leader>act <Plug>(coc-codeaction)
-nmap <leader><leader>n <Plug>(coc-diagnostic-next)
+" nmap <leader><leader>n <Plug>(coc-diagnostic-next)
 " ???
-nmap <leader>bb <C-^> "
+" nmap <leader>bb <C-^> "
