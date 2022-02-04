@@ -28,7 +28,7 @@ local options = {
   laststatus = 2,
   showcmd = true,
   showmode = true,
-  list = true, 
+  list = true,
   listchars = { tab = '>»', trail = '»' },
   wrap = true,
   breakindent = true,

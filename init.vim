@@ -103,7 +103,7 @@ endfunction
 "================================================
 
 " let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+" let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:rainbow_active = 1
 let g:closetag_filenames = '*.html,*.xhtml,*.js,*.jsx,*.phtml'
 let g:tagalong_filetypes = ['html', 'xml', 'jsx', 'eruby', 'ejs', 'eco', 'php', 'htmldjango', 'javascriptreact', 'typescriptreact']
