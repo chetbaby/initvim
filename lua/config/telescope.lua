@@ -2,11 +2,23 @@ local actions = require("telescope.actions")
 local custom_actions = {}
 local telescope = require("telescope")
 
+local noshow = { noremap = true, silent = true }
+local keymap = vim.api.nvim_set_keymap
+
+keymap("n", "<leader>fi", ":lua require('telescope.builtin').find_files({initial_mode = 'insert'})<CR>", noshow)
+keymap("n", "<leader>ff", ":lua require('telescope.builtin').live_grep({initial_mode = 'insert'})<CR>", noshow)
+keymap("n", "<leader>ma", ":lua require('telescope.builtin').marks()<CR>", noshow)
+keymap("n", "<leader>uf", ":lua require('telescope.builtin').buffers()<CR>", noshow)
+keymap("n", "<leader>no", ":Telescope notify<CR>", noshow)
+keymap("n", "<leader>die", ":Telescope diagnostics<CR>", noshow)
+keymap("n", "<leader>sy", ":Telescope lsp_document_symbols<CR>", noshow)
+keymap("n", "<leader>gb", ":Telescope git_branches<CR>", noshow)
+keymap("n", "<leader>gc", ":Telescope git_commits<CR>", noshow)
+keymap("n", "<leader>gcb", ":Telescope git_bcommits<CR>", noshow)
+keymap("n", "<leader>co", ":Telescope colorscheme<CR>", noshow)
+
 telescope.load_extension("projects")
 telescope.load_extension("fzf")
-telescope.load_extension("zoxide")
-telescope.load_extension("heading")
-telescope.load_extension("file_browser")
 telescope.load_extension("notify")
 
 telescope.setup({
@@ -25,7 +37,7 @@ telescope.setup({
 		mappings = {
 			i = {
 				-- Close on first esc instead of gonig to normal mode
-				["<esc>"] = actions.close,
+				-- ["<esc>"] = actions.close,
 				-- ["<A-q>"] = actions.end_selected_to_qflist, -- was giving error 🤬
 				["<C-q>"] = actions.send_to_qflist,
 				["<s-tab>"] = actions.toggle_selection + actions.move_selection_next,
@@ -49,7 +61,7 @@ telescope.setup({
 		prompt_prefix = " ",
 		selection_caret = " ",
 		entry_prefix = "  ",
-		initial_mode = "insert",
+		initial_mode = "normal",
 		selection_strategy = "reset",
 		sorting_strategy = "ascending",
 		layout_strategy = "horizontal",

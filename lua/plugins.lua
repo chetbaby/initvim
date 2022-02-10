@@ -92,6 +92,12 @@ return packer.startup(function()
 	})
 
 	-- FUNCTIONALITIES
+	use({
+		"Pocco81/AutoSave.nvim",
+		config = function()
+			require("config/autosave")
+		end,
+	})
 	use("machakann/vim-highlightedyank")
 	use("tpope/vim-commentary")
 	use("tpope/vim-eunuch")
@@ -129,10 +135,6 @@ return packer.startup(function()
 		requires = {
 			{ "nvim-lua/popup.nvim" },
 			{ "nvim-lua/plenary.nvim" },
-			{ "jvgrootveld/telescope-zoxide" },
-			{ "crispgm/telescope-heading.nvim" },
-			{ "nvim-telescope/telescope-symbols.nvim" },
-			{ "nvim-telescope/telescope-file-browser.nvim" },
 			{ "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
 		},
 		config = function()
