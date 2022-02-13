@@ -94,24 +94,25 @@ keymap("n", "'t", "mT", noshow)
 keymap("n", "<leader>dma", ":delmarks A-Z0-9<CR>", noshow)
 
 -- GIT SHIT
-keymap("", "<leader>cm", ":BCommits<CR>", noshow) -- telescope
-keymap("", "<leader><leader>g", ":Git<CR>", show)
+-- keymap("", "<leader>cm", ":BCommits<CR>", noshow) -- telescope
+-- keymap("", "<leader><leader>g", ":Git<CR>", show)
 keymap("", "<leader>gb", ":G blame<CR>", show)
-keymap("", "<leader>log", ":G log<CR>", show)
-keymap("", "<leader>ga", ":G add .<CR>", show)
+-- keymap("", "<leader>log", ":G log<CR>", show)
+-- keymap("", "<leader>ga", ":G add .<CR>", show)
 keymap("", "<leader>gc", ":G commit<CR>", show)
 keymap("", "<leader>amen", ":G commit --amdend --no-edit<CR>", show)
 keymap("", "<leader>up", ":G push -u origin<CR>", show)
 keymap("", "<leader>chk", ":G checkout<CR>", show)
 keymap("", "<leader>nb", ":G checkout -b", show)
-keymap("", "<leader>br", ":G branch<CR>", show) -- telescope?
+-- keymap("", "<leader>br", ":G branch<CR>", show) -- telescope?
 keymap("", "<leader>res", ":G reset --hard", show)
 keymap("", "<leader>resf", ":G checkout --<CR>", show)
 keymap("", "<leader>sta", ":G stash --index<CR>", show)
-keymap("", "<leader>dif", ":SignifyDiff<CR>", noshow) -- another lua dif plugin?
-keymap("", "<leader>mf", ":diffget //2<CR>", show) -- diff stuff i don't use
-keymap("", "<leader>mj", ":diffget //3<CR>", show) -- diff stuff i don't use
+-- keymap("", "<leader>dif", ":SignifyDiff<CR>", noshow) -- another lua dif plugin?
+-- keymap("", "<leader>mf", ":diffget //2<CR>", show) -- diff stuff i don't use
+-- keymap("", "<leader>mj", ":diffget //3<CR>", show) -- diff stuff i don't use
 keymap("", "<leader>G", ":15split | Gedit :<CR>", show)
+keymap("", "<leader>hub", ":GBrowse<CR>", noshow)
 
 -- RESIZE WITH ARROWS
 keymap("n", "<M-Up>", ":resize -2<CR>", noshow)

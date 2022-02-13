@@ -18,11 +18,6 @@ autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent! loadview
 augroup END
 
-augroup highlight_yank
-  autocmd!
-  autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 40})
-augroup END
-
 autocmd BufWinEnter * setlocal modifiable
 
 "=============================================
@@ -48,17 +43,7 @@ let g:mta_filetypes = {
   \ 'xml' : 1,
   \ 'jinja' : 1,
   \}
-"************************************************************
-"************************************************************
-"============================================================
-"=====================  CUSTOM MAPPINGS =====================
-"============================================================
-"************************************************************
-"************************************************************
 
-" TELESCOPE
-nmap <leader>ma :lua require('telescope.builtin').marks({layout_strategy='horizontal',path_display={"tail"}, layout_config={width=130, preview_width=0.6}})<CR>
-" nmap <leader><leader>b :lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown({layout_config={width=130}}))<CR>
-" nmap \ :lua require('telescope.builtin').file_browser({layout_strategy='horizontal', layout_config={width=130, preview_width=0.6}})<CR>
+
 " FOLDING
 nnoremap <expr> <f9> &foldlevel ? 'zM' :'zR'

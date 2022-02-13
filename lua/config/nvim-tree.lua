@@ -40,7 +40,7 @@ g.nvim_tree_icons = {
 local tree_cb = require("nvim-tree.config").nvim_tree_callback
 require("nvim-tree").setup({
 	-- disables netrw completely
-	disable_netrw = true,
+	disable_netrw = false,
 	-- hijack netrw window on startup
 	hijack_netrw = true,
 	-- open the tree when running this setup function
@@ -89,9 +89,9 @@ require("nvim-tree").setup({
 		number = false,
 		relativenumber = false,
 		-- width of the window, can be either a number (columns) or a string in `%`
-		width = 30,
+		width = 45,
 		-- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
-		side = "left",
+		side = "right",
 		-- if true the tree will resize itself after opening a file
 		auto_resize = false,
 		mappings = {

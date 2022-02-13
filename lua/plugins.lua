@@ -34,6 +34,7 @@ return packer.startup(function()
 
 	-- GIT
 	use("tpope/vim-fugitive")
+	use("tpope/vim-rhubarb")
 	use("tommcdo/vim-fugitive-blame-ext")
 	use({
 		"lewis6991/gitsigns.nvim",
