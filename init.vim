@@ -3,14 +3,11 @@ lua require 'init'
 "===================================================
 "================== AUTO-STUFF =====================
 "===================================================
-set autowriteall
-au FocusLost * silent! wa
-
-if has('persistent_undo')
-  set undolevels=5000
-  set undodir="$HOME/.config/nvim/.NVIM_UNDO_FILES"
-  set undofile
-endif
+" if has('persistent_undo')
+"   set undolevels = 5000
+"   set undodir = "$HOME/.config/nvim/.NVIM_UNDO_FILES"
+"   set undofile
+" endif
 
 augroup remember_folds
 autocmd!

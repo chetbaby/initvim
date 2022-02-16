@@ -57,6 +57,8 @@ local options = {
 	showtabline = 2,
 	termguicolors = true,
 	undofile = true,
+  -- undolevels = 5000,
+  -- undodir = "$HOME/.config/nvim/.NVIM_UNDO_FILES",
 	guifont = "monospace:h17",
 	cursorline = true,
 }

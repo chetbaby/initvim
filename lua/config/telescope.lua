@@ -17,6 +17,7 @@ keymap("n", "<leader>br", ":Telescope git_branches<CR>", noshow)
 keymap("n", "<leader>com", ":Telescope git_commits<CR>", noshow)
 keymap("n", "<leader>gcb", ":Telescope git_bcommits<CR>", noshow)
 keymap("n", "<leader>co", ":Telescope colorscheme<CR>", noshow)
+keymap("n", "<leader>fix", ":Telescope quickfix<CR>", noshow)
 
 telescope.load_extension("projects")
 telescope.load_extension("fzf")
@@ -41,17 +42,17 @@ telescope.setup({
 				-- ["<esc>"] = actions.close,
 				-- ["<A-q>"] = actions.end_selected_to_qflist, -- was giving error 🤬
 				["<C-q>"] = actions.send_to_qflist,
-				["<s-tab>"] = actions.toggle_selection + actions.move_selection_next,
-				["<tab>"] = actions.toggle_selection + actions.move_selection_previous,
+				["<s-tab>"] = actions.toggle_selection + actions.move_selection_previous,
+				["<tab>"] = actions.toggle_selection + actions.move_selection_next,
 				["<cr>"] = custom_actions.multi_selection_open,
 				["<c-v>"] = custom_actions.multi_selection_open_vsplit,
 				["<c-s>"] = custom_actions.multi_selection_open_split,
 				["<c-t>"] = custom_actions.multi_selection_open_tab,
 			},
 			n = {
-				["<s-tab>"] = actions.toggle_selection + actions.move_selection_next,
-				["<tab>"] = actions.toggle_selection + actions.move_selection_previous,
-				["<A-q>"] = actions.send_selected_to_qflist,
+				["<s-tab>"] = actions.toggle_selection + actions.move_selection_previous,
+				["<tab>"] = actions.toggle_selection + actions.move_selection_next,
+				["<C-Q>"] = actions.send_selected_to_qflist,
 				["<C-q>"] = actions.send_to_qflist,
 				["<cr>"] = custom_actions.multi_selection_open,
 				["<c-v>"] = custom_actions.multi_selection_open_vsplit,
