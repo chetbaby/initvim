@@ -1,19 +1,24 @@
+local noshow = { noremap = true, silent = true }
+local show = { noremap = true, silent = false }
+local keymap = vim.api.nvim_set_keymap
+keymap("", "<leader>sd", ":SidebarNvimToggle<CR>", noshow)
+
 require("sidebar-nvim").setup({
 	disable_default_keybindings = 0,
 	bindings = nil,
 	open = false,
 	side = "right",
-	initial_width = 30,
+	initial_width = 50,
 	hide_statusline = true,
 	update_interval = 1000,
 	section_separator = "-----",
 	sections = {
-		"git",
+		-- "git",
 		"symbols",
-		"todos",
-		"diagnostics",
-		"buffers",
-		"containers",
+		-- "todos",
+		-- "diagnostics",
+		-- "buffers",
+		-- "containers",
 	},
 	buffers = { icon = "", ignored_buffers = { "NvimTree", "SidebarNvim_*" } },
 	files = {

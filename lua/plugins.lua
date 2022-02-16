@@ -35,7 +35,7 @@ return packer.startup(function()
 	-- GIT
 	use("tpope/vim-fugitive")
 	use("tpope/vim-rhubarb")
-	use("tommcdo/vim-fugitive-blame-ext")
+	use("tommcdo/vim-fugitive-blame-ext") -- shows commit msg
 	use({
 		"lewis6991/gitsigns.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
@@ -152,7 +152,9 @@ return packer.startup(function()
 	})
 	use({
 		"neovim/nvim-lspconfig",
-		-- config = function() require('config/lsp') end,
+		config = function()
+			require("config/lsp")
+		end,
 	})
 	use({
 		"williamboman/nvim-lsp-installer",
@@ -169,6 +171,13 @@ return packer.startup(function()
 		requires = { { "jose-elias-alvarez/nvim-lsp-ts-utils" } },
 		config = function()
 			require("config/null-ls")
+		end,
+	})
+	use({
+		"folke/trouble.nvim",
+		requires = { { "kyazdani42/nvim-web-devicons" } },
+		config = function()
+			require("config/trouble")
 		end,
 	})
 

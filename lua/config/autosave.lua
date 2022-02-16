@@ -3,7 +3,7 @@ local autosave = require("autosave")
 autosave.setup({
 	enabled = true,
 	execution_message = "AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S"),
-	events = { "BufLeave", "BufUnload", "BufWinLeave", "VimLeavePre", "WinLeave", "WinEnter" },
+	events = { "VimLeavePre" },
 	conditions = {
 		exists = true,
 		filename_is_not = {},

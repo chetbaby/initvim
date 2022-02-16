@@ -1,3 +1,8 @@
+local noshow = { noremap = true, silent = true }
+local show = { noremap = true, silent = false }
+local keymap = vim.api.nvim_set_keymap
+
+keymap("", "<leader>die", ":TroubleToggle<CR>", noshow)
 require("trouble").setup({
 	position = "bottom", -- position of the list can be: bottom, top, left, right
 	height = 10, -- height of the trouble list when position is top or bottom

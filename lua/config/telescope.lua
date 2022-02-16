@@ -11,10 +11,10 @@ keymap("n", "<leader>ma", ":lua require('telescope.builtin').marks()<CR>", nosho
 keymap("n", "<leader>uf", ":lua require('telescope.builtin').buffers()<CR>", noshow)
 keymap("n", "<leader>no", ":Telescope notify<CR>", noshow)
 keymap("n", "<leader>pr", ":Telescope projects<CR>", noshow)
-keymap("n", "<leader>die", ":Telescope diagnostics<CR>", noshow)
+-- keymap("n", "<leader>die", ":Telescope diagnostics<CR>", noshow)
 keymap("n", "<leader>sy", ":Telescope lsp_document_symbols<CR>", noshow)
 keymap("n", "<leader>br", ":Telescope git_branches<CR>", noshow)
-keymap("n", "<leader>gc", ":Telescope git_commits<CR>", noshow)
+keymap("n", "<leader>com", ":Telescope git_commits<CR>", noshow)
 keymap("n", "<leader>gcb", ":Telescope git_bcommits<CR>", noshow)
 keymap("n", "<leader>co", ":Telescope colorscheme<CR>", noshow)
 
