@@ -106,7 +106,7 @@ keymap("", "<leader>chk", ":G checkout<CR>", show)
 keymap("", "<leader>nb", ":G checkout -b", show)
 -- keymap("", "<leader>br", ":G branch<CR>", show) -- telescope?
 keymap("", "<leader>res", ":G reset --hard", show)
-keymap("", "<leader>resf", ":G checkout --<CR>", show)
+-- keymap("", "<leader>rr", ":G checkout --<CR>", show)
 keymap("", "<leader>sta", ":G stash --index<CR>", show)
 -- keymap("", "<leader>dif", ":SignifyDiff<CR>", noshow) -- another lua dif plugin?
 -- keymap("", "<leader>mf", ":diffget //2<CR>", show) -- diff stuff i don't use

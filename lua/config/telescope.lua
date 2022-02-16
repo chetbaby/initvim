@@ -3,6 +3,7 @@ local custom_actions = {}
 local telescope = require("telescope")
 
 local noshow = { noremap = true, silent = true }
+local show = { noremap = true, silent = false }
 local keymap = vim.api.nvim_set_keymap
 
 keymap("n", "<leader>fi", ":lua require('telescope.builtin').find_files({initial_mode = 'insert'})<CR>", noshow)
@@ -13,17 +14,28 @@ keymap(
 	":lua require('telescope.builtin').lsp_code_actions({layout_strategy = 'cursor', layout_config = {width = 0.2, height = 0.2}})<CR>",
 	noshow
 )
+keymap(
+	"n",
+	"<leader>dia",
+	":lua require('telescope.builtin').diagnostics({layout_strategy = 'bottom_pane', layout_config = { height = 0.25 }, bufnr = 0})<CR>",
+	noshow
+)
+keymap(
+	"n",
+	"<leader>die",
+	":lua require('telescope.builtin').diagnostics({layout_strategy = 'bottom_pane', layout_config = { height = 0.25 }})<CR>",
+	noshow
+)
 keymap("n", "<leader>ma", ":lua require('telescope.builtin').marks()<CR>", noshow)
 keymap("n", "<leader>uf", ":lua require('telescope.builtin').buffers()<CR>", noshow)
 keymap("n", "<leader>no", ":Telescope notify<CR>", noshow)
 keymap("n", "<leader>pr", ":Telescope projects<CR>", noshow)
--- keymap("n", "<leader>die", ":Telescope diagnostics<CR>", noshow)
 keymap("n", "<leader>sy", ":Telescope lsp_document_symbols<CR>", noshow)
 keymap("n", "<leader>br", ":Telescope git_branches<CR>", noshow)
 keymap("n", "<leader>com", ":Telescope git_commits<CR>", noshow)
 keymap("n", "<leader>gcb", ":Telescope git_bcommits<CR>", noshow)
 keymap("n", "<leader>co", ":Telescope colorscheme<CR>", noshow)
-keymap("n", "<leader>fix", ":Telescope quickfix<CR>", noshow)
+keymap("n", "<leader>ick", ":Telescope quickfix<CR>", show)
 
 telescope.load_extension("projects")
 telescope.load_extension("fzf")
