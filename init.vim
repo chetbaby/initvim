@@ -41,6 +41,8 @@ Plug 'jparise/vim-graphql'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " We recommend updating the parsers on update
+Plug 'tpope/vim-eunuch'
+Plug 'mhinz/vim-startify'
 call plug#end()
 
 "===================================================
@@ -95,6 +97,7 @@ set updatetime=100
 set shortmess+=c
 set signcolumn=yes
 set autoread
+set scrolloff=12
 let g:skipview_files = ['*\.vim']
 
 "===================================================
@@ -369,3 +372,4 @@ nmap <leader>fp :let @" = expand("%")<CR>
 nmap <leader>pt 1 <C-g>
 nmap <leader>ppt :let @" = expand("%")<CR>
 nmap <leader>dma :delmarks A-Z0-9<CR>
+nmap <leader>rn :Move %
