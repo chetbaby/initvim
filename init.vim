@@ -8,7 +8,7 @@ lua require 'init'
 "   set undodir = "$HOME/.config/nvim/.NVIM_UNDO_FILES"
 "   set undofile
 " endif
-autocmd BufWinLeave * noa w!<CR>
+" autocmd BufWinLeave * noa w!<CR>
 
 augroup remember_folds
 autocmd!
