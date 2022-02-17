@@ -73,7 +73,7 @@ filetype plugin indent on
 set modifiable
 set noerrorbells
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent smartindent
-set number relativenumber
+set number ""relativenumber
 set noswapfile nobackup
 set incsearch ignorecase smartcase hlsearch
 set ruler laststatus=2 showcmd showmode
@@ -260,27 +260,28 @@ nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 nmap <leader>t :call TrimWhitespace()<CR>
 nmap <leader>d <Plug>(pydocstring)
 nmap <leader>co :Colors<CR>
-" nmap <leader>f :Files<CR>
-nmap <leader>fi :lua require('telescope.builtin').find_files({layout_strategy='horizontal',path_display={"tail"}, layout_config={width=130, preview_width=0.6}})<CR>
-" nmap <leader>L :Ag<CR>
-nmap <leader>L :lua require('telescope.builtin').live_grep({layout_strategy='horizontal',path_display={"tail"}, layout_config={width=130, preview_width=0.6}})<CR>
-nmap <leader>ma :lua require('telescope.builtin').marks({layout_strategy='horizontal',path_display={"tail"}, layout_config={width=130, preview_width=0.6}})<CR>
+" nmap <leader>fi :Files<CR>
+nmap <leader>fi :lua require('telescope.builtin').find_files({sorting_strategy = 'ascending', initial_mode = 'insert', layout_strategy='horizontal',path_display={"tail"}, layout_config={width=160, preview_width=0.6, prompt_position = 'top'}})<CR>
+nmap <leader>ff :lua require('telescope.builtin').live_grep({sorting_strategy = 'ascending', initial_mode = 'insert', layout_strategy='horizontal',path_display={"tail"}, layout_config={width=160, preview_width=0.6, prompt_position = 'top'}})<CR>
+nmap <leader>L :Ag<CR>
+" nmap <leader>L :lua require('telescope.builtin').live_grep({layout_strategy='horizontal',path_display={"tail"}, layout_config={width=160, preview_width=0.6}})<CR>
+nmap <leader>ma :lua require('telescope.builtin').marks({layout_strategy='horizontal',path_display={"tail"}, layout_config={width=160, preview_width=0.6}})<CR>
 nmap <leader>gb :Git blame<CR>
 nmap <leader><leader>g :Git<CR>
 map <leader>V "+y
 "xmap <leader>a gaip*
 "nmap <leader>a gaip*
 nmap <leader>li :Limelight!!<CR>
-" nmap <leader><leader>b :Buffers<CR>
-nmap <leader><leader>b :lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown({layout_config={width=130}}))<CR>
+nmap <leader><leader>b :Buffers<CR>
+" nmap <leader><leader>b :lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown({layout_config={width=130}}))<CR>
 nmap <leader><leader>a zz
 nmap <leader>cm :BCommits<CR>
 nmap <leader>dif :SignifyDiff<CR>
 nmap <leader>ud :UndotreeToggle<CR>
 nnoremap<leader>bd :%bd!<CR>
 nmap gs <Plug>(coc-git-chunkinfo)
-" nmap \ :EditVifm<CR>
-nmap \ :lua require('telescope.builtin').file_browser({layout_strategy='horizontal', layout_config={width=130, preview_width=0.6}})<CR>
+nmap \ :EditVifm<CR>
+" nmap \ :lua require('telescope.builtin').file_browser({layout_strategy='horizontal', layout_config={width=130, preview_width=0.6}})<CR>
 nnoremap<Tab> :bnext<CR>
 nnoremap<S-Tab> :bprevious<CR>
 nnoremap n nzzzv
