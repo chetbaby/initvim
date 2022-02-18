@@ -20,7 +20,7 @@ local on_attach = function(client, bufnr)
 	vim.cmd("command! LspSignatureHelp lua vim.lsp.buf.signature_help()")
 	-- KEYMAPS
 	buf_map(bufnr, "n", "gd", ":LspDef<CR>")
-	buf_map(bufnr, "n", "gr", ":LspRefs<CR>")
+	-- buf_map(bufnr, "n", "gr", ":LspRefs<CR>")
 	buf_map(bufnr, "n", "gy", ":LspTypeDef<CR>")
 	-- buf_map(bufnr, "n", "<Leader>ca", ":LspCodeAction<CR>")
 	buf_map(bufnr, "n", "gi", ":LspImplementation<CR>")
@@ -31,14 +31,14 @@ local on_attach = function(client, bufnr)
 	buf_map(bufnr, "n", "<Leader>a", ":LspDiagLine<CR>")
 	buf_map(bufnr, "i", "<C-x><C-x>", "<cmd> LspSignatureHelp<CR>")
 	if client.resolved_capabilities.document_formatting then
-		vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()")
+		vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync({timeout_ms = 1000})")
 	end
 end
 
 lspconfig.tsserver.setup({
 	on_attach = function(client, bufnr)
-		client.resolved_capabilities.document_formatting = false
-		client.resolved_capabilities.document_range_formatting = false
+		client.resolved_capabilities.document_formatting = true
+		client.resolved_capabilities.document_range_formatting = true
 		local ts_utils = require("nvim-lsp-ts-utils")
 		ts_utils.setup({})
 		ts_utils.setup_client(client)

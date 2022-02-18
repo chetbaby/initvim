@@ -14,6 +14,7 @@ keymap(
 	":lua require('telescope.builtin').lsp_code_actions({layout_strategy = 'cursor', layout_config = {width = 0.2, height = 0.2}})<CR>",
 	noshow
 )
+keymap("n", "gr", ":lua require('telescope.builtin').lsp_references()<CR>", noshow)
 keymap(
 	"n",
 	"<leader>dia",
