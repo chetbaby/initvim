@@ -180,6 +180,13 @@ return packer.startup(function()
 			require("config/trouble")
 		end,
 	})
+	use({
+		"ThePrimeagen/harpoon",
+		requires = { { "nvim-lua/plenary.nvim" } },
+		config = function()
+			require("config/harpoon")
+		end,
+	})
 
 	-- CMP
 	use({

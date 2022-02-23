@@ -32,7 +32,7 @@ keymap("n", "<leader>uf", ":lua require('telescope.builtin').buffers()<CR>", nos
 keymap("n", "<leader>no", ":Telescope notify<CR>", noshow)
 keymap("n", "<leader>pr", ":Telescope projects<CR>", noshow)
 keymap("n", "<leader>sy", ":Telescope lsp_document_symbols<CR>", noshow)
-keymap("n", "<leader>br", ":Telescope git_branches<CR>", noshow)
+keymap("n", "<leader>br", ":lua require('telescope.builtin').git_branches({initial_mode = 'insert'})<CR>", noshow)
 keymap("n", "<leader>com", ":Telescope git_commits<CR>", noshow)
 keymap("n", "<leader>gcb", ":Telescope git_bcommits<CR>", noshow)
 keymap("n", "<leader>co", ":Telescope colorscheme<CR>", noshow)
@@ -41,6 +41,7 @@ keymap("n", "<leader>ick", ":Telescope quickfix<CR>", show)
 telescope.load_extension("projects")
 telescope.load_extension("fzf")
 telescope.load_extension("notify")
+telescope.load_extension("harpoon")
 
 telescope.setup({
 	defaults = {
