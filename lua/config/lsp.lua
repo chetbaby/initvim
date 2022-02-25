@@ -12,6 +12,7 @@ local servers = {
 	"dockerls",
 	"sumneko_lua",
 	"tsserver",
+	"eslint",
 	"yamlls",
 	"jsonls",
 }
