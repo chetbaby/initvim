@@ -7,6 +7,7 @@ vim.g.loaded_python_provider = 0
 vim.g.loaded_perl_provider = 0
 
 local options = {
+  autochdir = false,
 	modifiable = true,
 	errorbells = false,
 	tabstop = 2,

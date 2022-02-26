@@ -10,13 +10,13 @@ lua require 'init'
 " endif
 " autocmd BufWinLeave * noa w!<CR>
 
-augroup remember_folds
-autocmd!
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent! loadview
-augroup END
+" augroup remember_folds
+" autocmd!
+" autocmd BufWinLeave *.* mkview
+" autocmd BufWinEnter *.* silent! loadview
+" augroup END
 
-autocmd BufWinEnter * setlocal modifiable
+" autocmd BufWinEnter * setlocal modifiable
 
 " Put plugins and dictionaries in this dir (also on Windows)
 let vimDir = '$HOME/.config/nvim'
