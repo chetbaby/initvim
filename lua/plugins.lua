@@ -76,12 +76,12 @@ return packer.startup(function()
 		end,
 	})
 	use("mhinz/vim-startify")
-	use({
-		"ahmedkhalf/project.nvim",
-		config = function()
-			require("config/project")
-		end,
-	})
+	-- use({ --changes cwd had to disable
+	-- 	"ahmedkhalf/project.nvim",
+	-- 	config = function()
+	-- 		require("config/project")
+	-- 	end,
+	-- })
 
 	-- NVIM-TREE
 	use({
