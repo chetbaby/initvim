@@ -143,13 +143,14 @@ return packer.startup(function()
 		end,
 	})
 
-  -- FZF
-  use { 'ibhagwan/fzf-lua',
-  requires = { 'kyazdani42/nvim-web-devicons' },
-  config = function()
-    require("config/fzf-lua")
-  end,
-}
+	-- FZF
+	use({
+		"ibhagwan/fzf-lua",
+		requires = { "kyazdani42/nvim-web-devicons" },
+		config = function()
+			require("config/fzf-lua")
+		end,
+	})
 
 	-- LSP
 	use({
