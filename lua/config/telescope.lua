@@ -6,7 +6,7 @@ local noshow = { noremap = true, silent = true }
 local show = { noremap = true, silent = false }
 local keymap = vim.api.nvim_set_keymap
 
-keymap("n", "<leader>fi", ":lua require('telescope.builtin').find_files({initial_mode = 'insert'})<CR>", noshow)
+-- keymap("n", "<leader>fi", ":lua require('telescope.builtin').find_files({initial_mode = 'insert'})<CR>", noshow)
 keymap("n", "<leader>ff", ":lua require('telescope.builtin').live_grep({initial_mode = 'insert'})<CR>", noshow)
 keymap(
 	"n",
