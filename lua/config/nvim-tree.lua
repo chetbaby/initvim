@@ -39,7 +39,7 @@ g.nvim_tree_icons = {
 }
 local tree_cb = require("nvim-tree.config").nvim_tree_callback
 require("nvim-tree").setup({
-  nvim_tree_disable_window_picker = false, -- 0 by default, will disable the window picker.
+	nvim_tree_disable_window_picker = false, -- 0 by default, will disable the window picker.
 	-- disables netrw completely
 	disable_netrw = false,
 	-- hijack netrw window on startup
@@ -82,7 +82,11 @@ require("nvim-tree").setup({
 		-- the command arguments as a list
 		args = {},
 	},
-
+	actions = {
+		open_file = {
+			quit_on_open = true,
+		},
+	},
 	trash = { cmd = "trash-put" },
 
 	view = {

@@ -8,6 +8,7 @@ local keymap = vim.api.nvim_set_keymap
 
 -- keymap("n", "<leader>fi", ":lua require('telescope.builtin').find_files({initial_mode = 'insert'})<CR>", noshow)
 keymap("n", "<leader>ff", ":lua require('telescope.builtin').live_grep({initial_mode = 'insert'})<CR>", noshow)
+keymap("n", "<leader>rep", ":lua require('telescope.builtin').grep_string()<CR>", noshow)
 keymap(
 	"n",
 	"<leader>ca",
