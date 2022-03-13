@@ -9,12 +9,12 @@ local keymap = vim.api.nvim_set_keymap
 -- keymap("n", "<leader>fi", ":lua require('telescope.builtin').find_files({initial_mode = 'insert'})<CR>", noshow)
 keymap("n", "<leader>ff", ":lua require('telescope.builtin').live_grep({initial_mode = 'insert'})<CR>", noshow)
 keymap("n", "<leader>rep", ":lua require('telescope.builtin').grep_string()<CR>", noshow)
-keymap(
-	"n",
-	"<leader>ca",
-	":lua require('telescope.builtin').lsp_code_actions({layout_strategy = 'cursor', layout_config = {width = 0.2, height = 0.2}})<CR>",
-	noshow
-)
+-- keymap(
+-- 	"n",
+-- 	"<leader>ca",
+-- 	":lua require('telescope.builtin').lsp_code_actions({layout_strategy = 'cursor', layout_config = {width = 0.2, height = 0.2}})<CR>",
+-- 	noshow
+-- )
 keymap("n", "gr", ":lua require('telescope.builtin').lsp_references()<CR>", noshow)
 keymap(
 	"n",

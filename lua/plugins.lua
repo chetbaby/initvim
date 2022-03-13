@@ -69,19 +69,6 @@ return packer.startup(function()
 			require("config/notify")
 		end,
 	})
-	use({
-		"sidebar-nvim/sidebar.nvim",
-		config = function()
-			require("config/sidebar")
-		end,
-	})
-	use("mhinz/vim-startify")
-	-- use({ --changes cwd had to disable
-	-- 	"ahmedkhalf/project.nvim",
-	-- 	config = function()
-	-- 		require("config/project")
-	-- 	end,
-	-- })
 
 	-- NVIM-TREE
 	use({
@@ -153,35 +140,7 @@ return packer.startup(function()
 	})
 
 	-- LSP
-	use({
-		"nvim-treesitter/nvim-treesitter",
-		config = function()
-			require("config/treesitter")
-		end,
-	})
-	use({
-		"neovim/nvim-lspconfig",
-		config = function()
-			require("config/lsp")
-		end,
-	})
-	use({
-		"williamboman/nvim-lsp-installer",
-		config = function()
-			require("config/lsp-installer")
-		end,
-	})
-	use({
-		"ray-x/lsp_signature.nvim", -- highlights part of fn signature you're in
-		requires = { { "neovim/nvim-lspconfig" } },
-	})
-	use({
-		"jose-elias-alvarez/null-ls.nvim",
-		requires = { { "jose-elias-alvarez/nvim-lsp-ts-utils" } },
-		config = function()
-			require("config/null-ls")
-		end,
-	})
+	use({ "neoclide/coc.nvim", branch = "release" })
 	use({
 		"folke/trouble.nvim",
 		requires = { { "kyazdani42/nvim-web-devicons" } },
@@ -196,33 +155,4 @@ return packer.startup(function()
 			require("config/harpoon")
 		end,
 	})
-
-	-- CMP
-	use({
-		"hrsh7th/nvim-cmp",
-		requires = {
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/cmp-buffer" },
-			{ "hrsh7th/cmp-path" },
-			{ "hrsh7th/cmp-cmdline" },
-			{ "hrsh7th/cmp-vsnip" },
-			{ "jparise/vim-graphql" },
-			{ "onsails/lspkind-nvim" },
-			{ "f3fora/cmp-spell", { "hrsh7th/cmp-calc" } },
-		},
-		config = function()
-			require("config/cmp")
-		end,
-	})
-	-- use 'nvim-lua/completion-nvim'
-
-	-- SNIPPETS
-	use("SirVer/ultisnips")
-	use("quangnguyen30192/cmp-nvim-ultisnips")
-	-- use("honza/vim-snippets")
-	-- use 'SirVer/ultisnips'
-	-- use({
-	-- 	"hrsh7th/vim-vsnip",
-	--   config = function() require('config/vsnip') end,
-	-- })
 end)
